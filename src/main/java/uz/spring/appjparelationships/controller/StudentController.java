@@ -29,8 +29,6 @@ public class StudentController {
         // select * from student limit 10 offset 0
         Pageable pageable = PageRequest.of(page, 10);
         Page<Student> studentPageUniversity = studentRepository.findAllByGroup_Faculty_UniversityId(universityId, pageable);
-
-        Student student = new Student();
         return studentPageUniversity;
     }
     // 3.Faculty Dekanat
